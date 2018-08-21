@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'vision.registration',
+    'vision.hostel',
+    'vision.student',
+    'vision.library',
+    'vision.main',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -76,8 +81,13 @@ WSGI_APPLICATION = 'vision.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'vision',                   # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': 'shadab',
+        'PASSWORD': 'shadab123',
+        'HOST': 'localhost',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '5432',
     }
 }
 
@@ -119,3 +129,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+PATH_TO_UPLOAD_BOOK_FILES =  os.path.join(BASE_DIR, 'uploads')
+PATH_TO_UPLOAD_INSTITUTE_LOGO = os.path.join(BASE_DIR, 'uploads')
+PATH_TO_UPLOAD_USER_IMAGES = os.path.join(BASE_DIR, 'uploads')
+PATH_TO_UPLOAD_BOOK_COVER = os.path.join(BASE_DIR, 'uploads')
+PATH_TO_UPLOAD_NOTES = os.path.join(BASE_DIR, 'uploads')
+PATH_TO_UPLOAD_EVENT_POSTER = os.path.join(BASE_DIR, 'uploads')
+PATH_TO_UPLOAD_NOTI_FILE = os.path.join(BASE_DIR, 'uploads')
