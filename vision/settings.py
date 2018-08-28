@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'vision.student',
     'vision.library',
     'vision.main',
+    'django_extensions',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -137,3 +138,4 @@ PATH_TO_UPLOAD_BOOK_COVER = os.path.join(BASE_DIR, 'uploads')
 PATH_TO_UPLOAD_NOTES = os.path.join(BASE_DIR, 'uploads')
 PATH_TO_UPLOAD_EVENT_POSTER = os.path.join(BASE_DIR, 'uploads')
 PATH_TO_UPLOAD_NOTI_FILE = os.path.join(BASE_DIR, 'uploads')
+PATH_TO_UPLOAD_USER_THUMB_IMPRESSION = os.path.join(BASE_DIR, 'uploads')

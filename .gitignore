@@ -106,3 +106,5 @@ venv.bak/
 
 .DS_Store
 vision/.DS_Store
+manage_local.py
+vision/settings_local.py
