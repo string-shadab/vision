@@ -16,7 +16,7 @@ from django.contrib.auth.models import User
 from vision.generic_models import Name
 
 
-from vision.institute.models import CourseSession
+from vision.institute.models import SessionCourse
 
 ###################################################################
 
@@ -27,7 +27,7 @@ class FeeType(Name):
 
 
 class CourseFeeDetail(models.Model):
-	course = models.ForeignKey(CourseSession, related_name = 'course_fee_details')
+	course = models.ForeignKey(SessionCourse, related_name = 'course_fee_details')
 	fee_type = models.ForeignKey(FeeType, related_name = 'fee_cources')
 	amount = models.IntegerField(_("Fee Amount"), validators = [MinValueValidator(0), MaxValueValidator(100)])
 	is_installments_allowed = models.BooleanField(_("Is student allowed to submit fee in installments"), default = False)

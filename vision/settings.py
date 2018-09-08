@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'vision.student',
     'vision.library',
     'vision.main',
+    'vision.fee',
+    'vision.institute',
     'django_extensions',
 ]
 
